@@ -9,10 +9,11 @@ def guess():
             f'jExMm02aWlucG13Y2ZwOWNjYXFrejJkc3IyMDZ3M2xrNWp5OXdlYzhnZCZlcD12MV9naWZzX3NlYXJjaC'
             f'ZjdD1n/Rs2QPsshsFI9zeT4Kn/giphy.webp">')
 
+choice = random.randint(0, 9)
+
 
 @app.route("/<int:guessed>")
 def number_checker(guessed):
-    choice = random.randint(0, 9)
     if guessed < choice:
         return ('<h1 style="color:red">too low !</h1>'
                 '<img width="300" height="300"src="https://media.giphy.com/media/jD4DwBtqPXRXa/giphy.gif">')
